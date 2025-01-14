@@ -20,6 +20,10 @@ a {
   text-decoration: none;
 }
 
+.navSelect {
+  @apply flex items-center gap-3 cursor-pointer p-2 tracking-wider hover:bg-[#f9f9f9] hover:text-[#090b13];
+}
+
 .slick-dots li button:before {
   @apply text-xs text-white !important;
 }

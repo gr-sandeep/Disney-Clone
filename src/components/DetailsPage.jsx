@@ -10,14 +10,14 @@ const DetailsPage = () => {
   const movie = MoviesList.find((movie) => movie.id === parseInt(id));
 
   return (
-    <div>
+    <div className="overflow-hidden fixed w-full">
       <img
         className="relative mt-24 rounded-md w-full h-[calc(100vh-96px)]"
         src={movie.backgroundImg}
         alt={movie.title}
       />
-      <div className="absolute bottom-20 px-10 w-1/2">
-        <img src={movie.titleImg} alt={movie.title} className="w-[400px] h-[400px] mb-5" />
+      <div className="absolute bottom-20 px-5 md:px-10 w-full md:w-[80%] lg:w-[60%] xl:w-1/2">
+        <img src={movie.titleImg} alt={movie.title} className="w-full h-full mb-5" />
         <div className="flex items-center justify-start gap-5 mb-5">
           <button
             title="Play Movie"
