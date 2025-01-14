@@ -4,7 +4,7 @@ import { getStorage } from "firebase/storage";
 import { GoogleAuthProvider, getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCpYxDvapsKHaz6rVFS9WaI9rgpG38cXWA",
+  apiKey: process.env.VITE_APP_API_KEY,
   authDomain: "sandys-disney.firebaseapp.com",
   projectId: "sandys-disney",
   storageBucket: "sandys-disney.firebasestorage.app",
