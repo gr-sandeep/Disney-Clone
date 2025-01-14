@@ -37,14 +37,6 @@ const Header = () => {
     };
   }, []);
 
-  useEffect(() => {
-    if (userName) {
-      navigate("/home");
-    } else {
-      navigate("/");
-    }
-  }, [userName]);
-
   const setUser = (user) => {
     dispatch(
       setUserLoginDetails({
@@ -59,7 +51,7 @@ const Header = () => {
     try {
       const response = await signInWithPopup(auth, provider);
       setUser(response.user);
-      console.log(response.user);
+      navigate("/home");
     } catch (error) {
       console.log(error);
     }
@@ -108,15 +100,12 @@ const Header = () => {
 
       {userName && screenSize < 900 && (
         <div
-          onMouseEnter={() => setshowNavDropDown(true)}
+          onMouseDown={() => setshowNavDropDown((prev) => !prev)}
           onMouseLeave={() => setshowNavDropDown(false)}
           className="flex items-center p-2 rounded font-semibold"
         >
           <div className="relative w-[150px] sm:w-[200px]">
-            <div
-              className="navSelect justify-between"
-              onClick={() => setshowNavDropDown((prev) => !prev)}
-            >
+            <div className="navSelect justify-between">
               <div className="flex items-center gap-3">
                 <IoHomeOutline fontSize={20} /> HOME
               </div>
@@ -153,7 +142,7 @@ const Header = () => {
         </button>
       ) : (
         <div
-          onMouseEnter={() => setShowSignOut(true)}
+          onMouseDown={() => setShowSignOut(true)}
           onMouseLeave={() => setShowSignOut(false)}
           className="flex flex-col"
         >

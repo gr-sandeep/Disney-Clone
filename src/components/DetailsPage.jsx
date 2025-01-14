@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { MoviesList } from "../config/MoviesList";
-import { IoAdd, IoAddCircleOutline, IoPlayOutline } from "react-icons/io5";
+import { IoPlayOutline } from "react-icons/io5";
 import { MdAdd, MdOutlineMovieFilter } from "react-icons/md";
 import { HiOutlineUserGroup } from "react-icons/hi";
 
@@ -10,13 +10,13 @@ const DetailsPage = () => {
   const movie = MoviesList.find((movie) => movie.id === parseInt(id));
 
   return (
-    <div className="overflow-hidden fixed w-full">
+    <div className="overflow-hidden fixed w-full h-[calc(100vh-96px)]">
       <img
-        className="relative mt-24 rounded-md w-full h-[calc(100vh-96px)]"
+        className="relative mt-24 rounded-md w-full h-full"
         src={movie.backgroundImg}
         alt={movie.title}
       />
-      <div className="absolute bottom-20 px-5 md:px-10 w-full md:w-[80%] lg:w-[60%] xl:w-1/2">
+      <div className="absolute pb-5 px-5 md:px-10 w-full md:w-[80%] lg:w-[60%] xl:w-1/2">
         <img src={movie.titleImg} alt={movie.title} className="w-full h-full mb-5" />
         <div className="flex items-center justify-start gap-5 mb-5">
           <button
