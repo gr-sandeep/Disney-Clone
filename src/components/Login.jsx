@@ -18,9 +18,9 @@ const Login = () => {
 
           <img src={"/images/cta-logo-two.png"} className="mt-5" alt="" />
 
-          <span className="text-gray-500 font-semibold text-sm text-center">
+          <p className="text-gray-500 font-semibold text-sm text-center">
             Developed by G R Sandeep 😎
-          </span>
+          </p>
         </div>
       </main>
     </section>

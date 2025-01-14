@@ -67,7 +67,7 @@ const Header = () => {
   return (
     <header className="absolute text-white flex items-center justify-between top-0 bg-[#090b13] w-full overflow-x-scrolly p-4">
       <img
-        onClick={() => navigate("/")}
+        onClick={() => navigate("/home")}
         src={"/images/logo.svg"}
         className="w-24 cursor-pointer"
         alt="Disney Logo"
@@ -75,7 +75,10 @@ const Header = () => {
 
       {userName && screenSize >= 900 && (
         <nav className="flex items-center gap-8 lg:gap-16">
-          <div className="flex items-center gap-1">
+          <div
+            onClick={() => navigate("/home")}
+            className="flex items-center gap-1"
+          >
             <img className="w-7" src="/images/home-icon.svg" alt="" />
             HOME
           </div>
@@ -106,7 +109,10 @@ const Header = () => {
         >
           <div className="relative w-[150px] sm:w-[200px]">
             <div className="navSelect justify-between">
-              <div className="flex items-center gap-3">
+              <div
+                onClick={() => navigate("/home")}
+                className="flex items-center gap-3"
+              >
                 <IoHomeOutline fontSize={20} /> HOME
               </div>
               <div className="cursor-pointer">

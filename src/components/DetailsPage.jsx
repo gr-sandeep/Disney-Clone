@@ -10,13 +10,13 @@ const DetailsPage = () => {
   const movie = MoviesList.find((movie) => movie.id === parseInt(id));
 
   return (
-    <div className="w-full h-[calc(100vh-96px)]">
+    <div className="w-full h-[calc(100vh-150px)]">
       <img
         className="relative mt-24 rounded-md w-full h-full"
         src={movie.backgroundImg}
         alt={movie.title}
       />
-      <div className="absolute bottom-5 pb-5 px-5 md:px-10 w-full md:w-[80%] lg:w-[60%] xl:w-1/2">
+      <div className="absolute bottom-5 px-5 md:px-10 w-full md:w-[80%] lg:w-[60%] xl:w-1/2">
         <img
           src={movie.titleImg}
           alt={movie.title}
@@ -51,10 +51,9 @@ const DetailsPage = () => {
         <h1 className="font-semibold pb-5">{movie.subTitle}</h1>
         <h1>{movie.description}</h1>
       </div>
-
-      <span className="text-gray-500 font-semibold text-sm text-center">
+      <p className="text-gray-500 font-semibold text-sm bottom-0 text-center">
         Developed by G R Sandeep 😎
-      </span>
+      </p>
     </div>
   );
 };
