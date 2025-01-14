@@ -29,7 +29,7 @@ a {
 }
 
 .viewer {
-  @apply flex shadow-lg items-center hover:scale-105 justify-center border-2 border-gray-600 rounded-lg !important;
+  @apply flex shadow-xl items-center hover:scale-105 justify-center border-2 border-gray-600 rounded-lg !important;
 }
 
 ::-webkit-scrollbar {

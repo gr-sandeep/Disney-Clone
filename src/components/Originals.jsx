@@ -6,7 +6,7 @@ const Originals = () => {
   return (
     <div>
       <h1 className="text-xl font-semibold">Original</h1>
-      <main className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 pt-2">
+      <main className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 pt-2">
         {originals.map((movie) => (
           <div className="viewer">
             <Link  key={movie.id}

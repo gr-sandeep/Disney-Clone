@@ -12,12 +12,16 @@ const DetailsPage = () => {
   return (
     <div className="w-full h-[calc(100vh-96px)]">
       <img
-        className="relative pt-24 rounded-md w-full h-full"
+        className="relative mt-24 rounded-md w-full h-full"
         src={movie.backgroundImg}
         alt={movie.title}
       />
       <div className="absolute bottom-5 pb-5 px-5 md:px-10 w-full md:w-[80%] lg:w-[60%] xl:w-1/2">
-        <img src={movie.titleImg} alt={movie.title} className="w-full h-full mb-5" />
+        <img
+          src={movie.titleImg}
+          alt={movie.title}
+          className="w-full h-full mb-5"
+        />
         <div className="flex items-center justify-start gap-5 mb-5">
           <button
             title="Play Movie"
@@ -47,6 +51,10 @@ const DetailsPage = () => {
         <h1 className="font-semibold pb-5">{movie.subTitle}</h1>
         <h1>{movie.description}</h1>
       </div>
+
+      <span className="text-gray-500 font-semibold text-sm text-center">
+        Developed by G R Sandeep 😎
+      </span>
     </div>
   );
 };
