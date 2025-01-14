@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", serif;
+  @apply text-[#F9F9F9] bg-[#040714] text-sm sm:text-base md:text-lg box-border;
+}
+
+a {
+  color: #f9f9f9;
+  text-decoration: none;
+}
+
+.slick-dots li button:before {
+  @apply text-xs text-white !important;
+}
+
+.viewer {
+  @apply flex shadow-lg items-center hover:scale-105 justify-center border-2 border-gray-600 rounded-lg !important;
+}
+
+::-webkit-scrollbar {
+  @apply w-1 h-1;
+}
