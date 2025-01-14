@@ -10,7 +10,7 @@ const Trending = () => {
         {trending.map((movie) => (
           <div className="viewer">
             <img
-              src={movie.titleImg}
+              src={movie.cardImg}
               width={300}
               height={300}
               alt={movie.title}

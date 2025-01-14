@@ -11,7 +11,7 @@ const Recommends = () => {
           <div className="viewer">
             <Link to={"/detail/" + movie.title.toLowerCase().replace(" ", "-")}>
               <img
-                src={movie.titleImg}
+                src={movie.cardImg}
                 width={300}
                 height={300}
                 alt={movie.title}
